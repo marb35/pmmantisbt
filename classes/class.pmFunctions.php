@@ -42,7 +42,7 @@ include_once(PATH_PLUGINS."pmMantis".PATH_SEP."class.pmMantis.php");
  *
  */
 function mc_project_get_all_subprojects($mantisWsdlServer, $user, $password, $projectId){
-    $pmMantis=new pmMantisClass($mantisWsdlServer,$user,$password);
+    $pmMantis=new pmMantisBtClass($mantisWsdlServer,$user,$password);
 
     $projects=$pmMantis->mc_project_get_all_subprojects($projectId);    
     return $projects;     
@@ -64,7 +64,7 @@ function mc_project_get_all_subprojects($mantisWsdlServer, $user, $password, $pr
  *
  */
 function mc_projects_get_user_accessible($mantisWsdlServer, $user, $password){
-    $pmMantis=new pmMantisClass($mantisWsdlServer,$user,$password);
+    $pmMantis=new pmMantisBtClass($mantisWsdlServer,$user,$password);
     
     $projects=$pmMantis->mc_projects_get_user_accessible();
     return $projects;     
